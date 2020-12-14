@@ -4,7 +4,7 @@ Exercices by Tom Hughes-Croucher &amp; Mike Walson from the Book "Node : Up and 
 ## Dependancies
 
 ```bash
-sudo apt-get/dnf/pacman install nodejs npm
+nodejs npm
 ```
 
 ## Usage
