@@ -10,7 +10,11 @@ chatServer.on('connection', function (client) {
         broadcast(data, client)
     })
     client.on('end', function () {
+        console.log(client.name + ' quit')
         clientList.splice(clientList.indexOf(client), 1)
+    })
+    client.on('error', function(e) {
+        console.log(e)
     })
 })
 
