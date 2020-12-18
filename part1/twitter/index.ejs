@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="<%- stylesheet %>">
+
+
+<head>
+    <meta charset="utf-8">
+    <%- partial('partials/stylesheet', stylesheets) %>
+        <title>
+            <%= title %>
+        </title>
+</head>
+
+<body>
+    <h1>
+        <%= header %>
+    </h1>
+    <%- body %>
+        <p>
+            <%= chirp %>
+        </p>
+        <form action="/send" method="POST">
+            <input type="text" length="140" name="tweet">
+            <input type="submit" value="Tweet">
+        </form>
+        <%- partial('partials/chirp', tweets) %>
+</body>
+
+</html>
