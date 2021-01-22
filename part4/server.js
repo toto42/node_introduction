@@ -18,3 +18,10 @@ s.on('abc', function() {
 
 s.emit('abc');
 s.emit('abc', a, b, c);
+
+if (arguments.length <= 3) {
+    handler.call(this, arguments[1], arguments[2]);
+} else {
+    var args = Array.prototype.slice.call(arguments, 1);
+    handler.apply(this, args);
+}
